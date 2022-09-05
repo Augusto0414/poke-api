@@ -28,6 +28,7 @@ function App() {
         <Character 
         id = {character.id}
         name = {character.name}
+        generatePokeId = {pokeApi}
         />
      }
     </div>

@@ -2,8 +2,10 @@ import React from 'react'
 import '../style/Character.css'
 
 
-const Character = ({id, name}) => {
-	
+const Character = ({id, name, generatePokeId}) => {
+	const pokeId = () =>{
+		generatePokeId();
+	}
   return (
     < div className ='cards d-flex justify-content-center'>
 				<div className ='card' style ={{width: '30rem'}} key={id}>
@@ -15,7 +17,7 @@ const Character = ({id, name}) => {
 						    <p className ='card-text'> {''}</p>
 					</div>
 					<div className ='card-footer'>
-						 <button className ='btn btn-primary'>Generate new pokemon</button>
+						 <button className ='btn btn-primary' onClick={pokeId}>Generate new pokemon</button>
 					</div>	
 				</div>
 	</div>
