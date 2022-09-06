@@ -2,7 +2,7 @@ import React from 'react'
 import '../style/Character.css'
 
 
-const Character = ({id, name, generatePokeId}) => {
+const Character = ({id, name, generatePokeId,type}) => {
 	const pokeId = () =>{
 		generatePokeId();
 	}
@@ -14,7 +14,7 @@ const Character = ({id, name, generatePokeId}) => {
 					</div>
 					<div className ='card-body'>
 						 <img src = {"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + id + ".png"} alt ='pokemon'/>
-						    <p className ='card-text'> {''}</p>
+						    <p className ='card-text'>Type: {type}</p>
 					</div>
 					<div className ='card-footer'>
 						 <button className ='btn btn-primary' onClick={pokeId}>Generate new pokemon</button>
